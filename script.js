@@ -1,22 +1,19 @@
-const nav = document.querySelector(".nav"),
-  searchIcon = document.querySelector("#searchIcon"),
-  navOpenBtn = document.querySelector(".navOpenBtn"),
-  navCloseBtn = document.querySelector(".navCloseBtn");
+// Add event listeners for button clicks
+const buttons = document.querySelectorAll('.button');
 
-searchIcon.addEventListener("click", () => {
-  nav.classList.toggle("openSearch");
-  nav.classList.remove("openNav");
-  if (nav.classList.contains("openSearch")) {
-    return searchIcon.classList.replace("uil-search", "uil-times");
-  }
-  searchIcon.classList.replace("uil-times", "uil-search");
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Perform actions based on button click
+        console.log('Button clicked:', button.textContent);
+    });
 });
 
-navOpenBtn.addEventListener("click", () => {
-  nav.classList.add("openNav");
-  nav.classList.remove("openSearch");
-  searchIcon.classList.replace("uil-times", "uil-search");
-});
-navCloseBtn.addEventListener("click", () => {
-  nav.classList.remove("openNav");
+// Add event listeners for category clicks
+const categories = document.querySelectorAll('.category');
+
+categories.forEach(category => {
+    category.addEventListener('click', () => {
+        // Perform actions based on category click
+        console.log('Category clicked:', category.textContent);
+    });
 });
